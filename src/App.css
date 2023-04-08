@@ -1,38 +1,316 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Noto+Serif:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: white;
+}
+.App {
+  width: 737px;
+}
+nav {
+  display: flex;
+  width: 736.99px;
+  height: 36.5px;
+  margin-top: 58px;
+  align-items: center;
+}
+nav p {
+  margin-left: 430px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+  cursor: pointer;
+  /* 2D2D2D */
+
+  color: #2d2d2d;
+}
+.arrow {
+  color: #a445ed;
+  margin-left: 18px;
+}
+.boll {
+  transform: all 0.3s;
+}
+hr {
+  width: 1px;
+  height: 32px;
+  margin-left: 26px;
+  color: #e9e9e9;
+}
+.anim {
+  width: 40px;
+  height: 20px;
+  background: #757575;
+  border-radius: 10px;
+  margin-left: 26px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.anim div {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  /* FFFFFF */
+  margin-left: 3px;
+  background: #ffffff;
+}
+.moon {
+  margin-left: 20px;
+}
+.font-family {
+  position: absolute;
+  width: 183px;
+  height: 152px;
+  left: 772px;
+  top: 105px;
+  background: #ffffff;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  z-index: 9999;
+  transition: all 0.3s;
+}
+.sansSerif {
+  margin-top: 24px;
+}
+.font-family p {
+  padding-left: 24px;
+  margin-left: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  /* 2D2D2D */
+  transition: all 0.3s;
+  color: #2d2d2d;
+}
+.font-family p:hover {
+  padding-left: 28px;
+  color: #9223e7;
+}
+.sans {
+  padding-left: 24px;
+  margin-top: 16px;
+}
+.memo {
+  margin-top: 16px;
+}
+.pass {
+  display: none;
+}
+input {
+  width: 712px;
+  height: 64px;
+  background: #f4f4f4;
+  padding-left: 24px;
+  border-radius: 16px;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 52px;
+  outline: none;
+  /* 2D2D2D */
+
+  color: #2d2d2d;
+}
+input:focus {
+  border: 2px solid #a445ed;
+}
+.search {
+  position: absolute;
+  width: 15.55px;
+  height: 15.55px;
+  left: 1030px;
+  top: 170px;
+  cursor: pointer;
+}
+.word {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  margin-top: 45px;
+  /* 2D2D2D */
+
+  color: #2d2d2d;
+}
+.phonetic {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  margin-top: 8px;
+  /* A445ED */
+
+  color: #a445ed;
+}
+.speech {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  /* 2D2D2D */
+  margin-top: 40px;
+  color: #2d2d2d;
+}
+.def {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 40px;
+  /* 757575 */
+
+  color: #757575;
+}
+.items {
+  margin-top: 25px;
+  margin-left: 47px;
+}
+.def-item {
+  /* Body M - Sans */
+  padding-top: 13px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  /* 2D2D2D */
+
+  color: #2d2d2d;
+}
+.audio {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  left: 990px;
+  top: 260px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.Syn {
+  display: flex;
+  margin-top: 55px;
 }
+.li {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  list-style: none;
+  margin-left: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  /* A445ED */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #a445ed;
+}
+.li:hover {
+  text-decoration: underline;
+}
+.pS {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* 757575 */
+
+  color: #757575;
+}
+.pA {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* 757575 */
+  margin-left: 0;
+  color: #757575;
+  margin-left: -45px;
+}
+.diva {
+  margin-top: 25px;
+  margin-left: 47px;
+}
+.ali {
+  padding-top: 13px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* identical to box height, or 133% */
+
+  /* 2D2D2D */
+
+  color: #2d2d2d;
+}
+.perr {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 8px;
+  /* FF5252 */
+
+  color: #ff5252;
+}
+.sad {
+  margin-top: 132px;
+  width: 64px;
+  height: 64px;
+  margin-left: 337px;
+}
+.p1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 44px;
+  /* 2D2D2D */
+
+  color: #2d2d2d;
+}
+.p2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+  margin-top: 24px;
+  text-align: center;
+
+  /* 757575 */
+
+  color: #757575;
 }
